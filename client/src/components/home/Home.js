@@ -181,9 +181,27 @@ font-family: 'Josefin Sans',sans-serif;
  
 
 
-function Home() {
+function Home(props) {
   const context = useContext(ApiContext);
   console.log(context.freelancer)
+
+  const handleButtonFreelance=()=>{
+    props.history.push({
+      pathname: "/questions-freelancer"
+      
+    })
+    
+
+  }
+
+  const handleButtonClient=()=>{
+    props.history.push({
+      pathname: "/questions"
+      
+    })
+    
+    
+  }
 
 
 
@@ -202,8 +220,8 @@ function Home() {
         <DivContainerButtom>        
             
           
-        <Button ><Link style={{textDecoration:'none', color:'black'}} to="/questions-freelancer">Freelancer</Link> </Button>
-        <Button><Link  style={{textDecoration:'none', color:'black'}} to="/questions"> Client </Link>  </Button>
+        <Button onClick={handleButtonFreelance}>Freelancer</Button>
+        <Button onClick={handleButtonClient}>Client</Button>
          
         </DivContainerButtom>
       
