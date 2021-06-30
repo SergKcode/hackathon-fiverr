@@ -218,11 +218,10 @@ function Home(props) {
         
 
         <DivContainerButtom>        
-            
-          
-        <Button onClick={handleButtonFreelance}>Freelancer</Button>
-        <Button onClick={handleButtonClient}>Client</Button>
-         
+
+        <Button ><Link style={{textDecoration:'none'}, {color: 'black'}} to="/questions-freelancer">Freelancer</Link> </Button>
+        <Button><Link  style={{textDecoration:'none'}, {color: 'black'}} to="/questions"> Client </Link>  </Button>
+
         </DivContainerButtom>
       
 
