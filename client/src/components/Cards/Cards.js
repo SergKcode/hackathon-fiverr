@@ -1,14 +1,77 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Card from "./card";
-
+import styled from "styled-components";
+import match from "../Cards/match.jpg"
 import "./Cards.css";
+import gifTransparent from '../../video/gifTransparent.gif'
+
+const DivHome = styled.div `
+background-image: url(${match});
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+width: 100%;
+
+@media screen and (max-width: 700px){
+        width: 100%;
+       
+        align-items: center;
+    }
+
+`;
+
+const ImgLogo = styled.img `
+    width: 501px;
+    height: 274px;
+
+ @media screen and (max-width: 700px){
+        width: 269px;
+        height: 163px;
+    }
+`;
+
+const H1 = styled.h1`
+padding: 29px;
+font-family: 'Josefin Sans',sans-serif;
+font-size: 3rem;
+background-color: rgb(220 219 219 / 50%);
+text-align: center;
+
+@media screen and (max-width: 700px){
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+  background-color: rgb(220 219 219 / 50%);
+  text-align: center;
+  width: 83%;
+    }
+
+`
+
+const DivContainer = styled.div `
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: rgb(220 219 219 / 50%);
+
+    @media screen and (max-width: 700px){
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: rgb(220 219 219 / 50%);
+    }
+`
+
+
 
 function Cards() {
   return (
-    <div className="wrapper">
-    <h3>Those are yours matches!</h3>
-    <div className="Cards">
+    <DivHome>
+      <ImgLogo src={gifTransparent}  alt='gif'/>
+    <H1>Those are yours matches!</H1>
+    <DivContainer>
         <Card
         image="https://www.ecestaticos.com/image/clipping/1200/675/10462edd391dad40a2c9b78a7f1eb087/estas-son-las-cosas-que-hacen-que-los-informaticos-se-rian-de-nosotros.jpg"
         title="Manuel Fernandez"
@@ -74,7 +137,7 @@ function Cards() {
         stars="2"
         prize="310"
       />
-    </div></div>
+    </DivContainer></DivHome>
   );
 }
 

@@ -63,7 +63,7 @@ export default class Card extends React.Component {
     return (
     <div>   
       <TinderCard  onSwipe={onSwipe} onCardLeftScreen={()=> onCardLeftScreen()} preventSwipe={[`up`, `down`]} >
-      <div style={{ width: this.props.width + "px" }}>
+       <div style={{ width: this.props.width + "px" }}>
         <div style={styleCard}>
           <div style={styleImage}>
             {this.props.image ? (
@@ -95,9 +95,10 @@ export default class Card extends React.Component {
 }
 
 Card.defaultProps = {
-  width: 350,
+  width: 300,
   title: "Template - Card Title",
   location: "Location label",
   description: "Template description textbox",
   icon: "icon"
+
 };
