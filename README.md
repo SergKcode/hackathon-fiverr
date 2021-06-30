@@ -1,139 +1,69 @@
-<h1 align="center">heroku-cleardb-fullstack-starter</h1>
-<p>
-  <img alt="JavaScript" src="https://github.com/aleen42/badges/raw/master/src/javascript.svg" />
-  <img alt="Node" src="https://github.com/aleen42/badges/raw/master/src/node.svg" />
-  <img alt="" src="" />
-  <img alt="" src="" />
-  <img alt="React" src="https://github.com/aleen42/badges/raw/master/src/react.svg" />
-  <img alt="React Router" src="https://github.com/aleen42/badges/raw/master/src/router.svg" />
-  <br />
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/carlosaore/heroku-cleardb-fullstack-starter#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/carlosaore/heroku-cleardb-fullstack-starter/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/carlosaore/heroku-cleardb-fullstack-starter/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/carlosaore/heroku-cleardb-fullstack-starter" />
-  </a>
-</p>
 
-> Create full stack apps with React and Express.<br>Run your client and server with a single command.
+# Hackathon-fiverr
 
-### 🏠 [Homepage](https://github.com/carlosaore/heroku-cleardb-fullstack-starter#readme)
+With this project we want to add an additional feature that we find interesting to include in the Fiver community
 
-### ✨ [Live demo](https://frozen-brook-20118.herokuapp.com/)
+## Installation 
 
-## :computer: Install
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```sh
-## Install dependencies for server
+
+1. Clone our Repository :
+
+
+```bash 
+  git clone https://github.com/SergKcode/hackathon-fiverr
+  cd hackathon-fiverr
+```
+
+2. Installing:
+
+```bash 
 npm install
+```
+And then do 
 
-# Install dependencies for client
+```bash 
 npm run client-install
 ```
 
-## :runner: Quick start
+3. Launch the web app:
 
-```sh
-# Run the client & server with concurrently 
-npm run dev
-
-# Run the Express server only
-npm run server
-
-# Run the React client only
-npm run client
-
-# Server runs on http://localhost:5000 and client on http://localhost:3000
+```bash 
+npm run-script dev
 ```
+Run the application in development mode. Open http://localhost:3000 to view it in the browser.
 
-## :page_facing_up: How to use this template
+The page will reload if you make any changes.
 
-1. Fork it, then use your forked copy as a template when creating a new repository.
-2. Make sure that you have:
-    - [installed `concurrently` globally](https://www.npmjs.com/package/concurrently)
-    - a Heroku account
-    - [installed the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) (and logged in)
-3. [Create a new Heroku app using the CLI from the app's root directory.](https://devcenter.heroku.com/articles/git#for-a-new-heroku-app)
-4. [Install ClearDB in your Heroku app](https://devcenter.heroku.com/articles/cleardb)
-5. [Create a `.env` file in the app's root directory](https://devcenter.heroku.com/articles/config-vars) like this:
-    ```js
-    DB_HOST=XXXXXX
-    DB_USER=XXXXXX
-    DB_PASSWORD=XXXXXX
-    DB_DATABASE=XXXXXX
-    ```
-   See the link in step 4 for guidance on how to find those values.
-6. [Set up you Config (aka env) variables in Heroku](https://devcenter.heroku.com/articles/config-vars) like this:
-    ```js
-    DB_HOST=XXXXXX
-    DB_USER=XXXXXX
-    DB_PASSWORD=XXXXXX
-    DB_DATABASE=XXXXXX
-   ```
-   See the link in step 4 for guidance on how to find those values.
-7. Adapt the code to your need.
-8. Test your code by running `npm run dev` in your terminal.
-9. [After committing any changes to the main branch, you can deploy them by doing `git push heroku main` from your terminal](https://devcenter.heroku.com/articles/git#deploying-code).
 
-## :nut_and_bolt: About the code
-The purpose of this template is to be an educational tool for students learning web development.
+## Our objective
 
-It's a fullstack application using the SERN stack.
+Is to make a website that consists of finding clients or freelancers with the characteristics they want; so that they find or match a group of available people and that they join to work; For this we ask a series of questions such as technological tools, languages, etc. that you need them to use in your gig.    
+## Authors
 
-It offers both the backend and frontend from a single place for small projects and quick deploys to Heroku.
 
-### Backend
+We are a group of 8 students from the Wild Code School Spain bootcamp: Alba, Andreas, Azhar, Javier, Manuel, Virginia, Sergio and Sara, this is our second hackathon, we created this project where we apply Frontend and Backend knowledge.
 
-Created with Express with a connection to a MySQL database, which can also be hosted in Heroku.
-It offers 2 endpoints:
-- `/api`
 
-  A GET request to this endpoint returns `"API is running"` if the server is up.
-- `/api/users`
+- [@Alba-López](https://www.github.com/Alopmel)
+- [@Azhar-Arshad](https://www.github.com/Axhar85)
+- [@Andreas-Kalicani](https://www.github.com/Andreas-Kalicani)
+- [@Javier-Gonzalez](https://www.github.com/harvgonzalez)
+- [@Manuel-Marque](https://www.github.com/manuel-marque)
+- [@Virginia-Herrera](https://www.github.com/Vir89)
+- [@Sergio-Caballero](https://www.github.com/SergKcode)
+- [@Sara-Valencia](https://www.github.com/saravalencia)
 
-  A GET request to this endpoint returns the contents of a table named "users" that is stored in the database (`SELECT * FROM users;`)
-  You can use the code provided in `/src/routes/usersRouter.js` to create your own MySQL query and route.
+## Linkedln profiles
 
-### Frontend
 
-The frontend was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-A bare-bones routing system is already included using React Router.
-
-The styling is done with styled-components, with a globalStyles and a theme.js files.
-
-Directories for [atomic design](https://bradfrost.com/blog/post/atomic-web-design/) architecture are also provided.
-
-Two different context are provided:
-- one for storing and providing data fetched from one (or many) APIs
-- another one for general purpose data and states.
-You can adapt them to suit your needs or use the code as a template to create your own contexts.
-
-A textData.js is also provided. See `/client/src/components/pages/Home.js` for an example on how to use it.
-
-## Author
-
-👤 **Carlos Orellana**
-
-* Github: [@carlosaore](https://github.com/carlosaore)
-* LinkedIn: [@carlosaore](https://linkedin.com/in/carlosaore)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/carlosaore/heroku-cleardb-fullstack-starter/issues).
-
-## :heart: Show your support
-
-Give a ⭐️ if this project helped you!
-
-## 📝 License
-
-Copyright © 2021 [Carlos Orellana](https://github.com/carlosaore).
-
-This project is [MIT](https://github.com/carlosaore/heroku-cleardb-fullstack-starter/blob/main/LICENSE) licensed.
+- [@Alba-López](https://www.linkedin.com/in/albalopezmelian/)
+- [@Azhar-Arshad](https://www.linkedin.com/in/azhar-arshad/)
+- [@Andreas-Kalicani](https://www.linkedin.com/in/andreas-kalicani/)
+- [@Javier-Gonzalez](https://www.linkedin.com/in/francisco-javier-gonzalez-romeo/)
+- [@Manuel-Marque](https://www.linkedin.com/in/manuel-marque/)
+- [@Virginia-Herrera](https://www.linkedin.com/in/virginia-herrera-herrera/)
+- [@Sergio-Caballero](https://www.linkedin.com/in/sergio-caballero-gallego/)
+- [@Sara-Valencia](https://www.linkedin.com/in/sara-valencia/)
+  
