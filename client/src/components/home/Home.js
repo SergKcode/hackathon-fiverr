@@ -182,25 +182,22 @@ font-family: 'Josefin Sans',sans-serif;
 
 
 function Home(props) {
-  const context = useContext(ApiContext);
-  console.log(context.freelancer)
-
   const handleButtonFreelance=()=>{
     props.history.push({
       pathname: "/questions-freelancer"
-      
+
     })
-    
+
 
   }
 
   const handleButtonClient=()=>{
     props.history.push({
       pathname: "/questions"
-      
+
     })
-    
-    
+
+
   }
 
 
@@ -208,27 +205,27 @@ function Home(props) {
     return (
       <DivHome  >
         <DivContainer>
-         <ImgLogo src={gifTransparent}  alt='gif'/>  
+         <ImgLogo src={gifTransparent}  alt='gif'/>
          <H1>
           Find your Match!
         </H1>
 
 
         </DivContainer>
-        
 
-        <DivContainerButtom>        
 
-        <Button ><Link style={{textDecoration:'none'}, {color: 'black'}} to="/questions-freelancer">Freelancer</Link> </Button>
-        <Button><Link  style={{textDecoration:'none'}, {color: 'black'}} to="/questions"> Client </Link>  </Button>
+        <DivContainerButtom>
+
+
+        <Button onClick={handleButtonFreelance}>Freelancer</Button>
+        <Button onClick={handleButtonClient}>Client</Button>
 
         </DivContainerButtom>
-      
+
 
       </DivHome>
-          
+
     );
   }
-  
+
   export default Home;
-  
