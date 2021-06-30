@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import Cards from "./components/Cards/Cards";
 import React, {Fragment} from "react";
 import Home from "./components/home/Home";
 import Navbar from "./components/Navbar";
@@ -20,7 +21,7 @@ function App()  {
     
     return (
         <Fragment>
-             <Navbar />
+             <Navbar />     
             <Switch>
                 <Route
                     exact path="/"
@@ -28,14 +29,7 @@ function App()  {
                       <Home {...props} />
                     }
                 />
-              
-
-                {/* <Route
-                    path="/questions"
-                    render={props =>
-                      <Questions {...props} />
-                    }
-                /> */}
+         
                 
                 <Route
                     path="/questions"
@@ -43,12 +37,19 @@ function App()  {
                       <QuestionTest {...props} />
                     }
                 />
+
                 <Route
                     path="/questions-freelancer"
                     render={props =>
                       <QuestionsFreelance {...props} />
                     }
                 />
+                <Route
+              path="/matches"
+              render={props =>
+                <Cards {...props} />
+              }              
+          />
                
             </Switch>
             
@@ -58,3 +59,5 @@ function App()  {
 
 
 export default App;
+
+
