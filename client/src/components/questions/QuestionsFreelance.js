@@ -172,7 +172,7 @@
      }
  `
 
- function QuestionsFreelance() {
+ function QuestionsFreelance(props) {
 
    const questions = [
  		{
@@ -278,20 +278,19 @@
  	];
 
 
-     const [currentQuestion, setCurrentQuestion] = useState(0);
-     let [selectedAnswer, setSelectedAnswer] = useState([questions.answerOptions]);
-        console.log(selectedAnswer)
+   const [currentQuestion, setCurrentQuestion] = useState(0);
 
 
-    
- const handleQuestion =  () => {
-   
-   console.log('click')
-   
- }
+   const handleQuestion = () => {
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+            setCurrentQuestion(nextQuestion)
+    }else{
+        props.history.push({
+          pathname: "/matches"
 
-
-
+        }) 
+      }}
 
      return (
         <DivHome> 
@@ -306,7 +305,7 @@
              
                <DivContainerButtom >
                {questions[currentQuestion].answerOptions.map((answerOption) => (
-							<Button onClick={handleQuestion}>{answerOption.answerText}</Button>
+							<Button  onClick={handleQuestion}>{answerOption.answerText}</Button>
 						))}
                 
                </DivContainerButtom >

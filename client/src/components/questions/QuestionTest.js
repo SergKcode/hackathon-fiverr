@@ -173,7 +173,7 @@ font-family: 'Josefin Sans',sans-serif;
  
 
 
-function QuestionTest() {
+function QuestionTest(props) {
 
     const questions = [
           {
@@ -214,28 +214,33 @@ function QuestionTest() {
           },
       ];
   
-      const [currentQuestion, setCurrentQuestion] = useState(0);
-      let [selectedAnswer, setSelectedAnswer] = useState([questions.answerOptions]);
-console.log(selectedAnswer)
-
- 
      
-  const handleQuestion =  () => {
+   const [currentQuestion, setCurrentQuestion] = useState(0);
+
+
+   const handleQuestion = () => {
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+            setCurrentQuestion(nextQuestion)
+    }else{
+        props.history.push({
+          pathname: "/matches"
+
+        }) 
+      }}
     
-    console.log('click')
-    
-  }
+  
   
  
       return (
         
           <DivHome> 
-            <ImgLogo src={gifTransparent}  alt='gif'></ImgLogo>
+            
 
             
 
             <DivShadow>
-                
+                <ImgLogo src={gifTransparent}  alt='gif'></ImgLogo>
                 <H2>Question Title</H2>
              
                <DivContainerButtom >
