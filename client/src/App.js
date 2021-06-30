@@ -1,9 +1,8 @@
 import { Switch, Route } from "react-router-dom";
 import Cards from "./components/Cards/Cards";
-
 import React, {Fragment} from "react";
-// import Navbar from "./components/Navbar";
 import Home from "./components/home/Home";
+import Navbar from "./components/Navbar";
 import QuestionTest from "./components/questions/QuestionTest";
 import QuestionsFreelance from "./components/questions/QuestionsFreelance";
 
@@ -22,7 +21,7 @@ function App()  {
     
     return (
         <Fragment>
-      
+             <Navbar />     
             <Switch>
                 <Route
                     exact path="/"

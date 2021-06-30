@@ -4,9 +4,8 @@ import Burger from './Burger';
 
 
 const Nav = styled.nav`
-  width: 100%;
-  height: 55px;
-  border-bottom: 2px solid #1dbf73;
+  height: 38px;
+  border-bottom: 2px solid #ffffff;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
@@ -29,11 +28,7 @@ const StyledImage = styled.img `
 const Navbar = () => {
   return (
     <Nav>
-        <LogoContanier>
-            <StyledImage src="Fiverr.png" alt="logo" />
-        </LogoContanier>
-      
-      <Burger />
+        <Burger />
     </Nav>
   )
 };
