@@ -301,7 +301,7 @@
             <DivShadow>
                 <ImgLogo src={gifTransparent}  alt='gif'></ImgLogo>
                 
-                <H2>Question Title</H2>
+                <H2>{questions[currentQuestion].questionText }</H2>
              
                <DivContainerButtom >
                {questions[currentQuestion].answerOptions.map((answerOption) => (
